@@ -1,0 +1,74 @@
+package com.casemanager.newbusiness;
+import com.casemanager.newbusiness.manulifeObject;
+
+ruleflow-group "computeuwroleDRL"
+rule "11"
+
+when
+$manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness=="DIR"&&manulifeObject.basicSumAssured>=0 && manulifeObject.basicSumAssured<=100000 && manulifeObject.uwLevel==0 && manulifeObject.productClass=="endowment")
+then
+$manulifeObject.setUwLevel(1);
+System.out.println("inside drl");
+end;
+
+rule "12"
+when
+$manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness=="DIR"&&manulifeObject.basicSumAssured>=0 && manulifeObject.basicSumAssured<=100000 && manulifeObject.uwLevel==1 && manulifeObject.productClass=="endowment" && manulifeObject.decision=="REJECT")
+then
+$manulifeObject.setUwLevel(2);
+System.out.println("inside drl");
+end;
+
+
+rule "13"
+when
+$manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness=="DIR"&&manulifeObject.basicSumAssured>=0 && manulifeObject.basicSumAssured<=100000 && manulifeObject.uwLevel==1 && manulifeObject.productClass=="endowment" && manulifeObject.decision=="REJECT")
+then
+$manulifeObject.setUwLevel(-1);
+System.out.println("inside drl");
+end;
+
+
+rule "14"
+when
+$manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness=="DIR"&&manulifeObject.basicSumAssured>=100001 && manulifeObject.basicSumAssured<=500000 && manulifeObject.uwLevel==0 && manulifeObject.productClass=="endowment")
+then
+$manulifeObject.setUwLevel(2);
+System.out.println("inside drl");
+end;
+
+rule "19"
+when
+$manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness=="DIR"&&manulifeObject.basicSumAssured>=500001 && manulifeObject.basicSumAssured<=1000000 && manulifeObject.uwLevel==0 && manulifeObject.productClass=="endowment")
+then
+$manulifeObject.setUwLevel(3);
+System.out.println("inside drl");
+end;
+
+
+
+rule "16"
+when
+$manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness=="DIR"&&manulifeObject.basicSumAssured>=100001 && manulifeObject.basicSumAssured<=500000 && manulifeObject.uwLevel==2 && manulifeObject.productClass=="endowment" && manulifeObject.decision=="REJECT")
+then
+$manulifeObject.setUwLevel(-1);
+System.out.println("inside drl");
+end;
+
+
+rule "17"
+when
+$manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness=="DIR"&&manulifeObject.basicSumAssured>=500001 && manulifeObject.basicSumAssured<=1000000 && manulifeObject.uwLevel==3 && manulifeObject.productClass=="endowment" && manulifeObject.decision=="REJECT")
+then
+$manulifeObject.setUwLevel(-1);
+System.out.println("inside drl");
+end;
+
+/*rule "18"
+when
+$manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness==""&&manulifeObject.basicSumAssured>=0 && manulifeObject.basicSumAssured<=0 && manulifeObject.uwLevel==0 && manulifeObject.productClass=="" && manulifeObject.decision=="")
+then
+$manulifeObject.setUwLevel(3);
+System.out.println("inside drl");
+end;*/
+

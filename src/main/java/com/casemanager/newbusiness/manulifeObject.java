@@ -8,12 +8,39 @@ public class manulifeObject implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "sourceOfBusiness")
+	@org.kie.api.definition.type.Label("sourceOfBusiness")
 	private java.lang.String sourceOfBusiness;
-	@org.kie.api.definition.type.Label(value = "basicSumAssured")
+	@org.kie.api.definition.type.Label("basicSumAssured")
 	private java.lang.Integer basicSumAssured;
-	@org.kie.api.definition.type.Label(value = "priority")
+	@org.kie.api.definition.type.Label("priority")
 	private java.lang.Integer priority;
+
+	@org.kie.api.definition.type.Label(value = "decision")
+	private java.lang.String decision;
+
+	@org.kie.api.definition.type.Label(value = "eRefNo")
+	private java.lang.String eRefNo;
+
+	@org.kie.api.definition.type.Label(value = "mongoDocID")
+	private java.lang.String mongoDocID;
+
+	@org.kie.api.definition.type.Label(value = "productClass")
+	private java.lang.String productClass;
+
+	@org.kie.api.definition.type.Label(value = "productCode")
+	private java.lang.String productCode;
+
+	@org.kie.api.definition.type.Label(value = "remarks")
+	private java.lang.String remarks;
+
+	@org.kie.api.definition.type.Label(value = "uwLevel")
+	private java.lang.Integer uwLevel;
+
+	@org.kie.api.definition.type.Label(value = "uw_role")
+	private java.lang.String uw_role;
+
+	@org.kie.api.definition.type.Label(value = "verification_Status")
+	private java.lang.Boolean verification_Status;
 
 	public manulifeObject() {
 	}
@@ -42,11 +69,97 @@ public class manulifeObject implements java.io.Serializable {
 		this.priority = priority;
 	}
 
+	public java.lang.String getDecision() {
+		return this.decision;
+	}
+
+	public void setDecision(java.lang.String decision) {
+		this.decision = decision;
+	}
+
+	public java.lang.String geteRefNo() {
+		return this.eRefNo;
+	}
+
+	public void seteRefNo(java.lang.String eRefNo) {
+		this.eRefNo = eRefNo;
+	}
+
+	public java.lang.String getMongoDocID() {
+		return this.mongoDocID;
+	}
+
+	public void setMongoDocID(java.lang.String mongoDocID) {
+		this.mongoDocID = mongoDocID;
+	}
+
+	public java.lang.String getProductClass() {
+		return this.productClass;
+	}
+
+	public void setProductClass(java.lang.String productClass) {
+		this.productClass = productClass;
+	}
+
+	public java.lang.String getProductCode() {
+		return this.productCode;
+	}
+
+	public void setProductCode(java.lang.String productCode) {
+		this.productCode = productCode;
+	}
+
+	public java.lang.String getRemarks() {
+		return this.remarks;
+	}
+
+	public void setRemarks(java.lang.String remarks) {
+		this.remarks = remarks;
+	}
+
+	public java.lang.Integer getUwLevel() {
+		return this.uwLevel;
+	}
+
+	public void setUwLevel(java.lang.Integer uwLevel) {
+		this.uwLevel = uwLevel;
+	}
+
+	public java.lang.String getUw_role() {
+		return this.uw_role;
+	}
+
+	public void setUw_role(java.lang.String uw_role) {
+		this.uw_role = uw_role;
+	}
+
+	public java.lang.Boolean getVerification_Status() {
+		return this.verification_Status;
+	}
+
+	public void setVerification_Status(java.lang.Boolean verification_Status) {
+		this.verification_Status = verification_Status;
+	}
+
 	public manulifeObject(java.lang.String sourceOfBusiness,
-			java.lang.Integer basicSumAssured, java.lang.Integer priority) {
+			java.lang.Integer basicSumAssured, java.lang.Integer priority,
+			java.lang.String decision, java.lang.String eRefNo,
+			java.lang.String mongoDocID, java.lang.String productClass,
+			java.lang.String productCode, java.lang.String remarks,
+			java.lang.Integer uwLevel, java.lang.String uw_role,
+			java.lang.Boolean verification_Status) {
 		this.sourceOfBusiness = sourceOfBusiness;
 		this.basicSumAssured = basicSumAssured;
 		this.priority = priority;
+		this.decision = decision;
+		this.eRefNo = eRefNo;
+		this.mongoDocID = mongoDocID;
+		this.productClass = productClass;
+		this.productCode = productCode;
+		this.remarks = remarks;
+		this.uwLevel = uwLevel;
+		this.uw_role = uw_role;
+		this.verification_Status = verification_Status;
 	}
 
 }
