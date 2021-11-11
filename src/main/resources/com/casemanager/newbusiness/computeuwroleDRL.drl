@@ -22,9 +22,9 @@ end;
 
 rule "13"
 when
-$manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness=="DIR"&&manulifeObject.basicSumAssured>=0 && manulifeObject.basicSumAssured<=100000 && manulifeObject.uwLevel==1 && manulifeObject.productClass=="endowment" && manulifeObject.decision=="REJECT")
+$manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness=="DIR"&&manulifeObject.basicSumAssured>=0 && manulifeObject.basicSumAssured<=100000 && manulifeObject.uwLevel==2 && manulifeObject.productClass=="endowment" && manulifeObject.decision=="REJECT")
 then
-$manulifeObject.setUwLevel(-1);
+$manulifeObject.setUwLevel(1);
 System.out.println("inside drl");
 end;
 
@@ -51,7 +51,7 @@ rule "16"
 when
 $manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness=="DIR"&&manulifeObject.basicSumAssured>=100001 && manulifeObject.basicSumAssured<=500000 && manulifeObject.uwLevel==2 && manulifeObject.productClass=="endowment" && manulifeObject.decision=="REJECT")
 then
-$manulifeObject.setUwLevel(-1);
+$manulifeObject.setUwLevel(1);
 System.out.println("inside drl");
 end;
 
@@ -60,7 +60,7 @@ rule "17"
 when
 $manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness=="DIR"&&manulifeObject.basicSumAssured>=500001 && manulifeObject.basicSumAssured<=1000000 && manulifeObject.uwLevel==3 && manulifeObject.productClass=="endowment" && manulifeObject.decision=="REJECT")
 then
-$manulifeObject.setUwLevel(-1);
+$manulifeObject.setUwLevel(2);
 System.out.println("inside drl");
 end;
 
