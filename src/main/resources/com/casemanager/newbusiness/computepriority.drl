@@ -31,8 +31,8 @@ end;
 
 /*rule "4"
 when
-$manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness==""&&manulifeObject.basicSumAssured>=0 && manulifeObject.basicSumAssured<=0)
+$manulifeObject:manulifeObject(manulifeObject.basicSumAssured>=1000000)
 then
-$manulifeObject.setPriority(3);
+$manulifeObject.setPriority(1);
 System.out.println("inside drl");
 end;*/

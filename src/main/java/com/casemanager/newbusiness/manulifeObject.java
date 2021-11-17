@@ -15,32 +15,47 @@ public class manulifeObject implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("priority")
 	private java.lang.Integer priority;
 
-	@org.kie.api.definition.type.Label(value = "decision")
+	@org.kie.api.definition.type.Label("decision")
 	private java.lang.String decision;
 
-	@org.kie.api.definition.type.Label(value = "eRefNo")
+	@org.kie.api.definition.type.Label("eRefNo")
 	private java.lang.String eRefNo;
 
-	@org.kie.api.definition.type.Label(value = "mongoDocID")
+	@org.kie.api.definition.type.Label("mongoDocID")
 	private java.lang.String mongoDocID;
 
-	@org.kie.api.definition.type.Label(value = "productClass")
+	@org.kie.api.definition.type.Label("productClass")
 	private java.lang.String productClass;
 
-	@org.kie.api.definition.type.Label(value = "productCode")
+	@org.kie.api.definition.type.Label("productCode")
 	private java.lang.String productCode;
 
-	@org.kie.api.definition.type.Label(value = "remarks")
+	@org.kie.api.definition.type.Label("remarks")
 	private java.lang.String remarks;
 
-	@org.kie.api.definition.type.Label(value = "uwLevel")
+	@org.kie.api.definition.type.Label("uwLevel")
 	private java.lang.Integer uwLevel;
 
-	@org.kie.api.definition.type.Label(value = "uw_role")
+	@org.kie.api.definition.type.Label("uw_role")
 	private java.lang.String uw_role;
 
-	@org.kie.api.definition.type.Label(value = "verification_Status")
+	@org.kie.api.definition.type.Label("verification_Status")
 	private java.lang.Boolean verification_Status;
+
+	@org.kie.api.definition.type.Label("processInstanceId")
+	private java.lang.String processInstanceId;
+
+	@org.kie.api.definition.type.Label("hniIndicator")
+	private java.lang.String hniIndicator;
+
+	@org.kie.api.definition.type.Label("advisorGroup")
+	private java.lang.String advisorGroup;
+
+	@org.kie.api.definition.type.Label("manulifeTimer")
+	private java.lang.String manulifeTimer;
+
+	@org.kie.api.definition.type.Label(value = "status")
+	private java.lang.Boolean status;
 
 	public manulifeObject() {
 	}
@@ -141,13 +156,56 @@ public class manulifeObject implements java.io.Serializable {
 		this.verification_Status = verification_Status;
 	}
 
+	public java.lang.String getProcessInstanceId() {
+		return this.processInstanceId;
+	}
+
+	public void setProcessInstanceId(java.lang.String processInstanceId) {
+		this.processInstanceId = processInstanceId;
+	}
+
+	public java.lang.String getHniIndicator() {
+		return this.hniIndicator;
+	}
+
+	public void setHniIndicator(java.lang.String hniIndicator) {
+		this.hniIndicator = hniIndicator;
+	}
+
+	public java.lang.String getAdvisorGroup() {
+		return this.advisorGroup;
+	}
+
+	public void setAdvisorGroup(java.lang.String advisorGroup) {
+		this.advisorGroup = advisorGroup;
+	}
+
+	public java.lang.String getManulifeTimer() {
+		return this.manulifeTimer;
+	}
+
+	public void setManulifeTimer(java.lang.String manulifeTimer) {
+		this.manulifeTimer = manulifeTimer;
+	}
+
+	public java.lang.Boolean getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(java.lang.Boolean status) {
+		this.status = status;
+	}
+
 	public manulifeObject(java.lang.String sourceOfBusiness,
 			java.lang.Integer basicSumAssured, java.lang.Integer priority,
 			java.lang.String decision, java.lang.String eRefNo,
 			java.lang.String mongoDocID, java.lang.String productClass,
 			java.lang.String productCode, java.lang.String remarks,
 			java.lang.Integer uwLevel, java.lang.String uw_role,
-			java.lang.Boolean verification_Status) {
+			java.lang.Boolean verification_Status,
+			java.lang.String processInstanceId, java.lang.String hniIndicator,
+			java.lang.String advisorGroup, java.lang.String manulifeTimer,
+			java.lang.Boolean status) {
 		this.sourceOfBusiness = sourceOfBusiness;
 		this.basicSumAssured = basicSumAssured;
 		this.priority = priority;
@@ -160,6 +218,11 @@ public class manulifeObject implements java.io.Serializable {
 		this.uwLevel = uwLevel;
 		this.uw_role = uw_role;
 		this.verification_Status = verification_Status;
+		this.processInstanceId = processInstanceId;
+		this.hniIndicator = hniIndicator;
+		this.advisorGroup = advisorGroup;
+		this.manulifeTimer = manulifeTimer;
+		this.status = status;
 	}
 
 }
